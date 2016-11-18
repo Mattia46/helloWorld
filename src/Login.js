@@ -1,22 +1,38 @@
 import React, { Component } from 'react';
-import logo from './logo.svg';
-import './App.css';
-//import { Navbar, Jumbotron, Button } from 'react-bootstrap';
 
-export class App extends Component {
-  render() {
-    return (
-      <div className="App">
-      <div className="App-header">
-      <img src={logo} className="App-logo" alt="logo" />
-      <h2>Welcome to React</h2>
-      </div>
-      <p className="App-intro">
-      To get started, edit <code>src/App.js</code> and save to reload.
-      </p>
-      </div>
-    );
+
+  function UserGreeting(props) {
+    return <h1> Welcome </h1>;
   }
+
+  function GuestGreeting(props) {
+    return <h1> Not Welcome </h1>;
+  }
+
+function Greeting(props) {
+  const isLoggedIn = props.isLoggedIn;
+  if(isLoggedIn) {
+    return <UserGreeting />;
+  }
+  return <GuestGreeting />;
+}
+
+
+
+function LoginButton(props) {
+  return (
+  <button onClick={props.onClick}>
+     Login
+  </button>
+  );
+}
+
+function LogoutButton(props) {
+  return (
+  <button onClick={props.onClick}>
+    Logout
+  </button>
+  );
 }
 
 export class LoginControl extends React.Component {
@@ -28,11 +44,11 @@ export class LoginControl extends React.Component {
   }
 
   handleLoginClick() {
-    this.setState({isLoggedIn: true})
+    this.setState({isLoggedIn: true});
   }
 
   handleLogoutClick() {
-    this.setState({isLoggedIn: false})
+    this.setState({isLoggedIn: false});
   }
 
   render() {

@@ -21,17 +21,24 @@ export class NameForm extends React.Component {
   render() {
     return (
       <form onSubmit={this.submit}>
+        <div>
         <label>
           Name:
           <input type="text" value={this.state.value} onChange={this.change} />
         </label>
+      </div>
+      <div>
+        <label>
+          Pick your favorite La Croix flavor:
+        </label>
+          <select value={this.state.value} onChange={this.change}>
+            <option value="grapefruit">Grapefruit</option>
+            <option value="lime">Lime</option>
+            <option value="coconut">Coconut</option>
+            <option value="mango">Mango</option>
+          </select>
+        </div>
         <input type="submit" value="Submit" />
-        <select>
-          <option value="grapefruit">Grapefruit</option>
-          <option value="lime">Lime</option>
-          <option selected value="coconut">Coconut</option>
-          <option value="mango">Mango</option>
-        </select>
       </form>
     );
   }

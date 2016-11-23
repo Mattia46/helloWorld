@@ -1,25 +1,27 @@
 import React from 'react';
 import ReactDOM from 'react-dom';
-import { App, Clock, Toggle, Mailbox } from './App';
+import { Clock, Toggle, Mailbox } from './App';
+//import { App, Clock, Toggle, Mailbox } from './App';
 import { LoginControl, Page } from './Login';
-import { CommentBox } from './Comment';
-import { Blog } from './listAndKeys';
+//import { CommentBox } from './Comment';
+//import { Blog } from './listAndKeys';
 import { NameForm } from './form';
+import { Calculator } from './temperature';
 import './index.css';
 import 'bootstrap/dist/css/bootstrap.css';
 import 'bootstrap/dist/css/bootstrap-theme.css';
 
 const messages = [1,2,3];
-const posts = [
-  {id: 1, title: 'Hello World', content: 'Welcome to learning React!'},
-  {id: 2, title: 'Installation', content: 'You can install React from npm.'}
-];
+//const posts = [
+  //{id: 1, title: 'Hello World', content: 'Welcome to learning React!'},
+  //{id: 2, title: 'Installation', content: 'You can install React from npm.'}
+//];
 
-ReactDOM.render(
-  <App />,
-  //<Greeting isLoggedIn={true} />,
-  document.getElementById('root')
-);
+//ReactDOM.render(
+  //<App />,
+  ////<Greeting isLoggedIn={true} />,
+  //document.getElementById('root')
+//);
 
 ReactDOM.render (
   <Clock />,
@@ -60,3 +62,8 @@ ReactDOM.render(
   <NameForm />,
   document.getElementById('form')
 );
+
+ReactDOM.render(
+  <Calculator />,
+  document.getElementById('root')
+)

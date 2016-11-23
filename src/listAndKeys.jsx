@@ -32,13 +32,13 @@ const listItems = numbers.map((number) =>
   <li key={number.toString()}>{number * 2}</li>
 );
 //ReactDOM.render (
+//
    //<ul>{listItems}</ul>,
   ////<NumberList />,
   //document.getElementById('number')
 //)
 
 const doubled = numbers.map((number) => number * 2);
-console.log(doubled);
 
 function ListItem(props) {
   return <li>{props.value} </li>

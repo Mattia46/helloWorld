@@ -53,7 +53,7 @@ export class LoginControl extends React.Component {
 
   render() {
     const isLoggedIn = this.state.isLoggedIn;
-    let button = null;
+    //let button = null;
     //if(isLoggedIn) {
       //button = <LogoutButton onClick={this.handleLogoutClick} />;
     //} else {

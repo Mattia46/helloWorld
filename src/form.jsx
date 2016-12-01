@@ -1,4 +1,6 @@
 import React from 'react';
+import Draggable from 'react-draggable';
+import { DraggableCore } from 'react-draggable';
 
 export class NameForm extends React.Component {
   constructor(props) {
@@ -22,15 +24,15 @@ export class NameForm extends React.Component {
     return (
       <form onSubmit={this.submit}>
         <div>
-        <label>
-          Name:
-          <input type="text" value={this.state.value} onChange={this.change} />
-        </label>
-      </div>
-      <div>
-        <label>
-          Pick your favorite La Croix flavor:
-        </label>
+          <label>
+            Name:
+            <input type="text" value={this.state.value} onChange={this.change} />
+          </label>
+        </div>
+        <div>
+          <label>
+            Pick your favorite La Croix flavor:
+          </label>
           <select value={this.state.value} onChange={this.change}>
             <option value="grapefruit">Grapefruit</option>
             <option value="lime">Lime</option>
@@ -38,7 +40,9 @@ export class NameForm extends React.Component {
             <option value="mango">Mango</option>
           </select>
         </div>
-        <input type="submit" value="Submit" />
+        <Draggable>
+          <input type="submit" value="Submit" />
+        </Draggable>
       </form>
     );
   }

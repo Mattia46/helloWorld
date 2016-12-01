@@ -13,6 +13,7 @@ export class App extends Component {
         <p className="App-intro">
           To get started, edit <code>src/App.js</code> and save to reload.
         </p>
+        <Clock />
       </div>
     );
   }
@@ -59,52 +60,4 @@ export class Clock extends React.Component {
     );
   }
 }
-
-export class Toggle extends React.Component {
-  constructor(props){
-    super(props);
-    this.state = {isToggleOn: true};
-    this.handleClick = this.handleClick.bind(this);
-  }
-
-  handleClick() {
-    this.setState(prevState => ({
-      isToggleOn: !prevState.isToggleOn
-    }));
-  }
-
-  render(){
-    return (
-      <button onClick={this.handleClick}>
-        {this.state.isToggleOn ? 'ON':'OFF'}
-      </button>
-    );
-  }
-}
-
-export class Mailbox extends Component {
-  constructor(props){
-    super()
-    this.state = {
-      unreadMessages: props.messages,
-      name: props.name
-    }
-  }
-  render(){
-    return(
-      <div>
-        <h1>hello {this.state.name}</h1>
-        <h2>you have { this.state.unreadMessages.length } messages</h2>
-        <h2>
-        </h2>
-      </div>
-    )
-  }
-  }
-
-
-
-
-
-
 

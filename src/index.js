@@ -8,7 +8,7 @@ import { TodoApp } from './Todo';
 //import { CommentBox } from './Comment';
 //import { Blog } from './listAndKeys';
 import { NameForm } from './Form';
-import { Calculator } from './Temperature';
+//import { Calculator } from './Temperature';
 import { WelcomeDialog, Dialog } from './Composition';
 import './index.css';
 import 'bootstrap/dist/css/bootstrap.css';
